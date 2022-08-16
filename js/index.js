@@ -54,45 +54,69 @@ $("#tabs").on("hover", function() {
 );
 $("#work").hover(
     function () {
-        $("#work").css("color", "#f322bb");
         $("#work").css("fontWeight", "bold");
+        $("#line1").fadeIn();
     },
     function () {
-        $("#work").css("color", "#3cf2f3");
         $("#work").css("fontWeight", "normal");
+        $("#line1").fadeOut();
     }
 );
 $("#about").hover(
     function () {
-        $("#about").css("color", "#f322bb");
         $("#about").css("fontWeight", "bold");
+        $("#line2").fadeIn();
     },
     function () {
-        $("#about").css("color", "#3cf2f3");
         $("#about").css("fontWeight", "normal");
+        $("#line2").fadeOut();
     } 
 ); 
 $("#contact").hover(
     function () {
-        $("#contact").css("color", "#f322bb");
         $("#contact").css("fontWeight", "bold");
+        $("#line3").fadeIn();
     },
     function () {
-        $("#contact").css("color", "#3cf2f3");
         $("#contact").css("fontWeight", "normal");
+        $("#line3").fadeOut();
     } 
 );
 $("#resume").hover(
     function () {
-        $("#resume").css("color", "#f322bb");
         $("#resume").css("fontWeight", "bold");
+        $("#line4").fadeIn();
     },
     function () {
-        $("#resume").css("color", "#3cf2f3");
         $("#resume").css("fontWeight", "normal");
+        $("#line4").fadeOut();
     }
 );
 
+$("#allProjects").on("hover", function(){
+    console.log("you hovered over view all projects");
+});
+
+$("#allProjects").hover (
+    function (){
+        $("#allProjects").css("fontWeight", "bold");
+        $("#allProjects").css("color", "#f322bb");
+    },
+    function (){
+        $("#allProjects").css("fontWeight", "normal");
+        $("#allProjects").css("color", "#33f2f3");
+    }
+);
+
+$(".skills").on("click", function () {
+    $(".heading").on("click", function () {
+        $(".heading").click("flexcontainer", function (){
+            $(".flexContainer").on("slideDown", function() {
+                (".flexContainer").slideDown(slow);
+            });    
+        });
+    });
+});
 
         
 
