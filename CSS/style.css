@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 30;
   background-color: #0d0d0d;
 }
 /*nav bar*/
@@ -11,15 +11,20 @@ header {
   justify-content: space-between;
 }
 header ul {
+  list-style: none;
   float: right;
   color: #3CF2F3;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16pt;
+  font-size: 18pt;
 }
 header li {
+  position: relative;
   display: inline-block;
+  justify-content: space-between;
   padding: 0px 8px;
+  margin: 0;
 }
+
 
 /*footer*/
 .footer {
@@ -41,7 +46,7 @@ footer li {
 }
 /*hero section*/
 .heroImg {
-  background-color: #87468F;
+  background-color: #0d0d0d;
   padding: 100px 16px;
   width: 100%;
 }
@@ -49,7 +54,6 @@ footer li {
   max-width: 500px;
   margin: 0 auto;
   padding: 64px;
-  
   text-align: center;
 }
 button {
@@ -63,7 +67,7 @@ button {
 
 /* my work section */
 .myWork {
-  padding: 0px;
+  padding: 0;
   background-color: #0d0d0d;
 }
 .heading {
@@ -74,8 +78,8 @@ button {
 }
 .workGrid {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 400px 400px 400px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
   "img1 project1"
   "project2 img2"
@@ -83,7 +87,7 @@ button {
   ;
 }
 .workGrid img {
-  max-width: 500;
+  max-width: 500px;
   margin: 0 auto;
   display: block;
 }
@@ -98,20 +102,20 @@ button {
 }
 .project1 {
   grid-area: project1;
-  padding-right: 64;
+  padding-right: 0;
 }
 .project2 {
   grid-area: project2;
-  padding-left: 124;
+  padding-left: 124px;
 }
 .project3 {
   grid-area: project3;
-  padding-right: 64;
 }
 
 .myWork h3 {
   display: flex;
   justify-content: center;
+  text-align: end;
   text-decoration-line: underline;
 }
 
@@ -123,7 +127,6 @@ button {
 .flexContainer {
   display: flex;
   flex-direction: row;
-  rows: 33% 33% 33%;
 }
 .flexContainer div {
   width: 33%;
@@ -168,6 +171,7 @@ h3 {
 h4 {
   font-size: 16pt;
 }
+
 @media only screen and (max-width:600){
   .flexContainer {
     flex-direction: column;
