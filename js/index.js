@@ -11,40 +11,40 @@ $("button").on("hover", function() {
 $("#downloadResume").hover(
     function () {
         $("#downloadResume").css("fontWeight", "bold");
-        $("#downloadResume").css("box-shadow", "5px 5px #f322bb");
+        $("#downloadResume").css("background-color", "#f322bb");
     },
     function () {
         $("#downloadResume").css("fontWeight", "normal");
-        $("#downloadResume").css("box-shadow", "0px 0px");
+        $("#downloadResume").css("background-color", "#3CF2F3");
 });
 $("#button1").hover(
     function() {
         $("#button1").css("fontWeight", "bold");
-        $("#button1").css("box-shadow", "5px 5px #f322bb");
+        $("#button1").css("background-color", "#f322bb");
     },
     function () {
         $("#button1").css("fontWeight", "normal");
-        $("#button1").css("box-shadow", "0px 0px");
+        $("#button1").css("background-color", "#3CF2F3");
 }
 );
 $("#button2").hover(
     function() {
         $("#button2").css("fontWeight", "bold");
-        $("#button2").css("box-shadow", "5px 5px #f322bb");
+        $("#button2").css("background-color", "#f322bb");
     },
     function () {
         $("#button2").css("fontWeight", "normal");
-        $("#button2").css("box-shadow", "0px 0px");
+        $("#button2").css("background-color", "#3CF2F3");
 }
 );
 $("#button3").hover(
     function() {
         $("#button3").css("fontWeight", "bold");
-        $("#button3").css("box-shadow", "5px 5px #f322bb");
+        $("#button3").css("background-color", "#f322bb");
     },
     function () {
         $("#button3").css("fontWeight", "normal");
-        $("#button3").css("box-shadow", "0px 0px");
+        $("#button3").css("background-color", "#3cf2f3"); 
 }
 );
 
@@ -107,16 +107,21 @@ $("#allProjects").hover (
         $("#allProjects").css("color", "#33f2f3");
     }
 );
+$(".nav").on("click", function (event){
+    if(this.hash !=='') {
+        e.preventDefault ();
+        const hash = this.hash;
+        $("html, body").animate({
+            scrollTop: $(hash).offset().top
+        }, 800);
+    }
+ });
+ 
 
-$(".skills").on("click", function () {
-    $(".heading").on("click", function () {
-        $(".heading").click("flexcontainer", function (){
-            $(".flexContainer").on("slideDown", function() {
-                (".flexContainer").slideDown(slow);
-            });    
-        });
-    });
-});
+
+
+
+
 
         
 

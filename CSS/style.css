@@ -1,7 +1,16 @@
 body {
-  margin: 30;
+  margin: 0;
   background-color: #0d0d0d;
+  overflow: auto;
+  scroll-snap-type: smooth;
 }
+
+body .section {
+  scroll-snap-align: top;
+  overflow: auto;
+  width: 100vw;
+}
+
 /*nav bar*/
 header {
   background-color: #0d0d0d;
@@ -9,20 +18,25 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100px;
 }
 header ul {
   list-style: none;
   float: right;
+  text-decoration: none;
   color: #3CF2F3;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 18pt;
 }
-header li {
-  position: relative;
+#tabs li {
   display: inline-block;
-  justify-content: space-between;
-  padding: 0px 8px;
-  margin: 0;
+  padding-right: 16px;
+  width: max-content;
+}
+
+a{
+  color: #3CF2F3;
+  text-decoration: none;
 }
 
 #line1, #line2, #line3, #line4 {
@@ -42,7 +56,7 @@ footer ul {
   float: right;
   color: #3CF2F3;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16pt;
+  font-size: 18pt;
 }
 footer li {
   display: inline-block;
@@ -57,7 +71,7 @@ footer li {
 .content {
   max-width: 500px;
   margin: 0 auto;
-  padding: 64px;
+  padding: 0px;
   text-align: center;
 }
 button {
@@ -70,8 +84,8 @@ button {
 }
 
 /* my work section */
-.myWork {
-  padding: 0;
+#myWork {
+  padding-top: 16px;
   background-color: #0d0d0d;
 }
 .heading {
@@ -81,8 +95,9 @@ button {
   padding-top: 32;
 }
 .workGrid {
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
   "img1 project1"
@@ -91,49 +106,81 @@ button {
   ;
 }
 .workGrid img {
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto;
   display: block;
 }
 .img1 {
   grid-area: img1;
+  float:right;
+  padding: 32px;
 }
 .img2 {
   grid-area: img2;
+  padding: 32px;
 }
 .img3 {
   grid-area: img3;
+  float:right;
+  padding: 32px;
 }
 .project1 {
   grid-area: project1;
-  padding-right: 0;
+  float:left;
+  padding-top: 32px;
 }
 .project2 {
   grid-area: project2;
-  padding-left: 124px;
+  text-align: right;
+  padding-top: 32px;
 }
 .project3 {
   grid-area: project3;
+  float: left;
+  padding-top: 32px;
 }
-.myWork h4 {
+#myWork h4 {
   text-align: center;
   text-decoration: underline;
-  padding: 32px;
+  padding: 0px;
 }
 
-/* skills section */
-.skills {
-  padding:124px;
+/* about section */
+#aboutMe {
+  padding: 16px;
+  margin: 0 auto;
   background-color: #0d0d0d;
+}
+#aboutImage {
+  width: 500px;
+}
+#aboutMe p {
+  text-align: left;
+  padding-left: 96px;
+  padding-right: 96px;
+}
+#aboutMe h3 {
+  text-align: left;
 }
 .flexContainer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+.bio {
+  padding-left: 96px;
 }
 .flexContainer div {
-  width: 33%;
-  padding-left: 64px;
+  width: 25%;
+  margin: 0 auto;
 }
+.flexContainer2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+
 .flexContainer ul {
   color: white;
   list-style: none;
@@ -145,18 +192,20 @@ button {
 
 
 /*contact section*/
-.contact {
+#contact {
   background-color: #0d0d0d;
   width: 100%;
   display: inline-block;
   text-align: center;
-
+}
+#contactInfo .content {
+  padding-top: 128px;
+  padding-bottom: 256px;
 }
 
 /*font styles*/
-h1, h3, h4 {
+h1, h2, h3, h4 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #3CF2F3;
 }
 p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -167,15 +216,23 @@ p {
 h1, .heading {
   font-size: 32pt;;
   font-weight: medium;
+  color: #3CF2F3;
+}
+h2 {
+  font-size: 24pt;
+  color: #ffffff;
 }
 h3 {
   font-size: 16pt;
   font-weight: medium;
+  color: #3CF2F3;
 }
 h4 {
   font-size: 16pt;
   font-weight: normal;
+  color: #3CF2F3;
 }
+
 
 @media only screen and (max-width:600){
   .flexContainer {
