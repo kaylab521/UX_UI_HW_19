@@ -267,7 +267,7 @@ footer {
 }
 
 
-@media all and (max-width:600px){
+@media all and (max-width:800px){
   .h1 {
     font-size: 48pt;
   }
