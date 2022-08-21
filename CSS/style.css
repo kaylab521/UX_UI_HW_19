@@ -45,7 +45,8 @@ a{
 /*hero section*/
 .heroImg {
   background-color: #0d0d0d;
-  padding: 100px 16px;
+  padding-top: 128px;
+  padding-bottom: 128px;
   width: 100%;
 }
 .content {
@@ -173,23 +174,26 @@ button a{
 .flexContainer2 {
   display: flex;
   margin: 0 auto;
-  flex-direction: column;
   justify-content: center;
-  padding-left: 98px;
-  padding-right: 98px;
+  
 } 
 .flexContainer2 div {
-  margin:0 auto;
-
+  width: 100%;
+  margin: 32px;
 }
+
 .meImg {
   display: flexbox;
   align-items: center;
   width: fit-content;
+  padding-left: 32px;
+  padding-right: 16px;
 }
 .bio {
   display:flex;
-  width: 500px;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 32px;
 }
 
 
@@ -263,7 +267,7 @@ footer {
 }
 
 
-@media only screen and (max-width:600px){
+@media all and (max-width:600px){
   .h1 {
     font-size: 48pt;
   }
@@ -346,39 +350,34 @@ footer {
     grid-area: skills3;
     max-width: fit-content;
     text-align: center;
-  }
     max-width: 600px;
     text-align: center;
   }
   .flexContainer2 {
-    display: grid;
+    display: flex;
     margin: 0 auto;
-    flex: 600px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "bio"
-    "meImage"
-    ;
+    flex-wrap: wrap;
+
   } 
+  .flexContainer2 div {
+    width: 100%;
+    margin: 0 auto;
+  }
   .meImg {
-    grid-area: "meImg";
+    display: flexbox;
+    align-items: flex-start;
+    width: fit-content;
   }
   .bio {
-    grid-area: "bio";
-  }
-  .flexContainer2 div {
-    
+    display:flex;
+    justify-content: flex-start;
   }
   .skills ul {
     max-width: fit-content;
-    align-text: center;
+    text-align: center;
   }
   .skills h3{
     max-width: fit-content;
   }
-  
- 
- 
-  
+
 }
