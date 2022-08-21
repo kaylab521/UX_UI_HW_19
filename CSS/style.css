@@ -329,8 +329,8 @@ footer {
     "skills2"
     "skills3"
   ;
-
   }
+
   .flexContainer div {
     width: 100%;
     margin: 0 auto;
@@ -350,7 +350,6 @@ footer {
     grid-area: skills3;
     max-width: fit-content;
     text-align: center;
-    max-width: 600px;
     text-align: center;
   }
   .flexContainer2 {
