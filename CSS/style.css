@@ -132,7 +132,6 @@ button a{
 
 /* about section */
 #aboutMe {
-  padding: 32px;
   margin: 0 auto;
   background-color: #0d0d0d;
 }
@@ -141,29 +140,24 @@ button a{
 }
 #aboutMe p {
   text-align: left;
-  padding-left: 96px;
-  padding-right: 96px;
+  width: auto;
 }
 #aboutMe h3 {
   text-align: left;
+  width: fit-content;
+}
+.flexContainer li {
+  width: fit-content;
 }
 .flexContainer {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
-.bio {
-  padding-left: 96px;
-}
+
 .flexContainer div {
   width: 25%;
   margin: 0 auto;
-}
-.flexContainer2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0;
 }
 
 .flexContainer ul {
@@ -173,6 +167,29 @@ button a{
   font-size: 16pt;
   font-weight: 250;
   line-height: 1.5;
+}
+
+
+.flexContainer2 {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 98px;
+  padding-right: 98px;
+} 
+.flexContainer2 div {
+  margin:0 auto;
+
+}
+.meImg {
+  display: flexbox;
+  align-items: center;
+  width: fit-content;
+}
+.bio {
+  display:flex;
+  width: 500px;
 }
 
 
@@ -246,12 +263,9 @@ footer {
 }
 
 
-@media only screen and (max-width:600){
-  .flexContainer {
-    flex-direction: row;
-  }
-  .flexContainer div {
-    width: 1vh;
+@media only screen and (max-width:600px){
+  .h1 {
+    font-size: 48pt;
   }
   .workGrid {
     margin: 0 auto;
@@ -274,20 +288,97 @@ footer {
   }
   .img1 {
     grid-area: img1;
+    padding-top: 128px;
   }
   .img2 {
     grid-area: img2;
+    padding-top: 256px;
   }
   .img3 {
     grid-area: img3;
+    padding-top: 256px;
   }
   .project1 {
     grid-area: project1;
+    text-align: center;
   }
   .project2 {
     grid-area: project2;
+    text-align: center;
   }
   .project3 {
     grid-area: project3;
+    text-align: center;
   }
+  .myWork h4 {
+    padding-bottom: 256px;
+  }
+
+  .flexContainer {
+    display: grid;
+    margin: 0 auto;
+    flex: 600px;
+    grid-template-columns: 100fr;
+    grid-template-rows: 100fr;
+    grid-template-areas:
+    "skills1"
+    "skills2"
+    "skills3"
+  ;
+
+  }
+  .flexContainer div {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .skills1 {
+    grid-area: skills1;
+    max-width: fit-content;
+    text-align: center;
+  }
+  .skills2 {
+    grid-area: skills2;
+    max-width: fit-content;
+    text-align: center;
+  }
+  .skills3 {
+    grid-area: skills3;
+    max-width: fit-content;
+    text-align: center;
+  }
+    max-width: 600px;
+    text-align: center;
+  }
+  .flexContainer2 {
+    display: grid;
+    margin: 0 auto;
+    flex: 600px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "bio"
+    "meImage"
+    ;
+  } 
+  .meImg {
+    grid-area: "meImg";
+  }
+  .bio {
+    grid-area: "bio";
+  }
+  .flexContainer2 div {
+    
+  }
+  .skills ul {
+    max-width: fit-content;
+    align-text: center;
+  }
+  .skills h3{
+    max-width: fit-content;
+  }
+  
+ 
+ 
+  
 }
